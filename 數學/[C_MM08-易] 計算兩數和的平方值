@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+    int b, a;
+    int result;
+    
+    while(scanf("%d %d", &a, &b) != EOF){
+        result = a + b;
+        printf("%d\n", result * result);
+    }
+    return 0;
+}
