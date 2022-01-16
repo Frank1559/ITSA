@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int bottom;
+    double result, a;
+    
+    while(scanf("%d", &bottom) != EOF){
+        printf("%d days\n%d hours\n%d minutes\n%d seconds\n", bottom/60/60/24, bottom/60/60%24, bottom/60%60, bottom%60);
+    }
+    return 0;
+}
