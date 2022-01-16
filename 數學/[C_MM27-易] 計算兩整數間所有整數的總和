@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){   
+    int a, b, i, cnt=0;
+    
+    while(scanf("%d %d", &a, &b) != EOF){
+        if(a > b){
+            i = a;
+            a = b;
+            b = i;
+        }
+        for(i=a;i<=b;i++){
+            cnt += i;
+        }
+        printf("%d\n", cnt);
+        cnt=0;
+    }
+    return 0;
+}
