@@ -1,0 +1,14 @@
+#include    <stdio.h>
+#include    <math.h>
+
+int main(){
+    int x, y;
+    int result, a;
+    
+    while(scanf("%d %d", &x, &y) != EOF){
+        result = (x * x + y * y);
+        if(result <= 10000) printf("inside\n");
+        else printf("outside\n");
+    }
+    return 0;
+}
