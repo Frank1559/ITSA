@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){   
+    int a, b, tmp;
+    while((scanf("%d %d", &a, &b)) != EOF){   
+        while(a != 0){   
+            tmp = a;
+            a = b % a;
+            b = tmp;
+        }
+        printf("%d\n", b);
+    }
+    return 0;
+}
