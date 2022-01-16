@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){   
+    int a, b, i, cnt=0;
+    
+    while(scanf("%d", &a) != EOF){
+        for(i=35;i<=a;i++){
+            if((i % 35 == 0) && cnt == 0){
+                printf("%d", i);
+                cnt++;
+            }
+            else if(i % 35 == 0) printf(" %d", i);
+        }
+        printf("\n");
+        cnt=0;
+    }
+    return 0;
+}
