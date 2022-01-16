@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+    double bottom, height;
+    double result;
+    
+    while(scanf("%lf %lf", &bottom, &height) != EOF){
+        // printf("%f\n", top);
+        result = bottom * height / 2;
+        printf("%.1f\n", result);
+    }
+    return 0;
+}
