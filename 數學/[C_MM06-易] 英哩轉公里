@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+    int bottom;
+    double result, a;
+    
+    while(scanf("%d", &bottom) != EOF){
+        result = bottom * 1.6;
+        a=((int)((result*100+5)/10))/10.0;
+        printf("%.1f\n", a);
+    }
+    return 0;
+}
