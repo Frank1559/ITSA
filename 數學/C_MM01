@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+    double top, bottom, height;
+    double result;
+    
+    while(scanf("%lf %lf %lf", &top, &bottom, &height) != EOF){
+        // printf("%f\n", top);
+        result = ((top + bottom) * height / 2);
+        printf("Trapezoid area:%.1f\n", result);
+    }
+    return 0;
+}
