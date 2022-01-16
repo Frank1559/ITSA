@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int bottom;
+    double result, a;
+    
+    while(scanf("%d", &bottom) != EOF){
+        printf("%d %d %d\n", bottom, bottom * bottom, bottom * bottom * bottom);
+    }
+    return 0;
+}
