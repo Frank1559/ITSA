@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+    int bottom, height;
+    int result, i=0;
+    
+    while(scanf("%d %d", &bottom, &height) != EOF){
+        i++;
+        result = bottom + height;
+        printf("%d\n", result);
+    return 0;
+}
