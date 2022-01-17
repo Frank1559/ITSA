@@ -1,0 +1,52 @@
+#include    <stdio.h>
+#include    <stdlib.h>
+#include    <string.h>
+
+int main(){   
+    int cnt=0, i, n, check=0;
+    char temp[1024], *ptr;
+    int a[10];
+    
+    
+    for(i=0;i<10;i++){
+        a[i] = 0;
+    }
+    scanf("%d", &n);
+    while(scanf("%s", temp) != EOF){
+        if(strlen(temp) != 4){
+            printf("Failure Input\n");
+            cnt=0;
+            check=0;
+            for(i=0;i<10;i++){
+                a[i] = 0;
+            }
+            memset(temp, 0, sizeof(temp));
+            continue;
+        }
+        ptr = temp;
+        // printf("%c\n", *ptr);
+        while(*ptr != '\0'){
+            n = (*ptr) - '0';
+            a[n]++;
+            ptr++;
+        }
+        for(i=0;i<10;i++){
+            if(a[i] > 2){
+                printf("No\n");
+                check = 1;
+                break;
+            }
+            if(a[i] == 2) cnt++;
+        }
+        if(cnt == 1) printf("Yes\n");
+        else if(cnt != 1 && check == 0) printf("No\n");
+        cnt=0;
+        check=0;
+        for(i=0;i<10;i++){
+            a[i] = 0;
+        }
+        memset(temp, 0, sizeof(temp));
+    }
+    
+    return 0;
+}
