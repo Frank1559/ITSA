@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){   
+    int a, j, i, cnt, check=0;
+    
+    while(scanf("%d", &a) != EOF){
+        for(j=2;j*j<=a;j++){
+            if(a % j == 0){
+                printf("NO\n");
+                check = 1;
+                break;
+            }
+        }
+        if(check == 0) printf("YES\n");
+        check = 0;
+    }
+    return 0;
+}
