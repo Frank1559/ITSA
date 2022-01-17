@@ -1,0 +1,17 @@
+#include    <stdio.h>
+
+int main(){   
+    int cnt=0, i, j;
+    int a[6];
+    
+    while(scanf("%d", &a[cnt]) != EOF){
+        cnt++;
+    }
+    for(i=0;i<cnt;i++){
+        for(j=0;j<cnt-1;j++){
+            printf("%03d ", a[i] * a[j]);
+        }
+        printf("%03d\n", a[i] * a[j]);
+    }
+    return 0;
+}
