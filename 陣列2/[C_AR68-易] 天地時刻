@@ -1,0 +1,48 @@
+#include    <stdio.h>
+
+int main(){   
+    int cnt=0, i, j;
+    int a, b;
+    
+    while(scanf("%d %d", &a, &b) != EOF){
+        switch(a){
+            case 23:case 0:
+                printf("rat\n");
+                break;
+            case 1:case 2:
+                printf("ox\n");
+                break;
+            case 3:case 4:
+                printf("tiger\n");
+                break;
+            case 5:case 6:
+                printf("rabbit\n");
+                break;
+            case 7:case 8:
+                printf("dragon\n");
+                break;
+            case 9:case 10:
+                printf("snake\n");
+                break;
+            case 11:case 12:
+                printf("horse\n");
+                break;
+            case 13:case 14:
+                printf("goat\n");
+                break;
+            case 15:case 16:    
+                printf("monkey\n");
+                break;
+            case 17:case 18:
+                printf("rooster\n");
+                break;
+            case 19:case 20:
+                printf("dog\n");
+                break;
+            case 21:case 22:
+                printf("pig\n");
+                break;
+        }
+    }
+    return 0;
+}
