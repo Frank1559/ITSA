@@ -1,0 +1,24 @@
+#include    <stdio.h>
+
+int main(){   
+    int cnt=0, i, j, temp;
+    int a[1024];
+    
+    scanf("%d", &temp);
+    while(scanf("%d", &a[cnt]) != EOF){
+        cnt++;
+    }
+    for(i=0;i<cnt;i++){
+        for(j=i;j<cnt;j++){
+            if(a[j] < a[i]){
+                temp = a[j];
+                a[j] = a[i];
+                a[i] = temp;
+            }
+        }
+    }
+    for(i=0;i<cnt;i++){
+        printf("%d\n", a[i]);
+    }
+    return 0;
+}
