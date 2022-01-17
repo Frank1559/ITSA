@@ -1,0 +1,32 @@
+#include    <stdio.h>
+#include    <string.h>
+#include    <ctype.h>
+
+int main(){   
+    int cnt=0, i;
+    char temp[2];
+    
+    while(scanf("%s", temp) != EOF){
+        if(isalpha(temp[0])){
+            switch(temp[0]){
+                case 'J':
+                    cnt += 11;
+                    break;
+                case 'Q':
+                    cnt += 12;
+                    break;
+                case 'K':
+                    cnt += 13;
+                    break;
+                case 'A':
+                    cnt += 14;
+                    break;
+            }
+        }
+        else if(strcmp(temp, "10") == 0) cnt += 10;
+        else if(isdigit(temp[0])) cnt += temp[0] - '0';
+        memset(temp, 0, sizeof(temp));
+    }
+    printf("%d\n", cnt);
+    return 0;
+}
