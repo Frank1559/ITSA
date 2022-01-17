@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){   
+    int a, j, i, cnt, check=0;
+    
+    while(scanf("%d", &a) != EOF){
+        for(i=a-1;i>=1;i--){
+            for(j=2;j*j<=i;j++){
+                if(i % j == 0){
+                    check = 1;
+                    break;
+                }
+            }
+            if(check == 0){
+                cnt = i;
+                break;
+            }
+            check = 0;
+        }
+        printf("%d\n", cnt);
+    }
+    return 0;
+}
