@@ -1,0 +1,39 @@
+#include    <stdio.h>
+#include    <string.h>
+
+int main(){   
+    int cnt=0, i, j, n, x;
+    char str[1024];
+    char a[5][5]={"123", "456", "789", "321", "654"};
+    char b[5][5]={"Tom", "Cat", "Nana", "Lim", "Won"};
+    char c[5][5]={"DTGD", "CSIE", "ASIE", "DBA", "FDD"};
+    
+    scanf("%d", &n);
+    while(scanf("%d %s", &x, str) != EOF){
+        switch(x){
+            case 1:
+                for(i=0;i<5;i++){
+                    if(strcmp(str, a[i]) == 0){
+                        printf("%s %s %s\n", a[i], b[i], c[i]);
+                    }
+                }
+                break;
+            case 2:
+                for(i=0;i<5;i++){
+                    if(strcmp(str, b[i]) == 0){
+                        printf("%s %s %s\n", a[i], b[i], c[i]);
+                    }
+                }
+                break;
+            case 3:
+                for(i=0;i<5;i++){
+                    if(strcmp(str, c[i]) == 0){
+                        printf("%s %s %s\n", a[i], b[i], c[i]);
+                    }
+                }
+                break;
+        }
+        memset(str, 0, sizeof(str));
+    }
+    return 0;
+}
