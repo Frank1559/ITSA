@@ -1,0 +1,21 @@
+#include    <stdio.h>
+
+int main(){   
+    int cnt=0, i, j, temp;
+    int a[9];
+    
+    while(scanf("%d,%d,%d", &a[0 + cnt], &a[3 + cnt], &a[6 + cnt]) != EOF){
+        cnt++;
+    }
+    for(i=0;i<9;i++){
+        for(j=i;j<9;j++){
+            if(a[i] > a[j]){
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    printf("%d\n", a[8] + a[7] + a[6]);
+    return 0;
+}
