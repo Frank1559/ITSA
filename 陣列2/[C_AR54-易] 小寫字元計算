@@ -1,0 +1,21 @@
+#include    <stdio.h>
+
+int main(){   
+    int cnt=0, i, n;
+    char temp;
+    int a[26];
+    
+    
+    for(i=0;i<26;i++){
+        a[i] = 0;
+    }
+    scanf("%d", &n);
+    while(scanf("%c", &temp) != EOF){
+        cnt = temp - 'a';
+        a[cnt]++;
+    }
+    for(i=0;i<26;i++){
+        if(a[i] != 0) printf("%c %d\n", 'a' + i, a[i]);
+    }
+    return 0;
+}
