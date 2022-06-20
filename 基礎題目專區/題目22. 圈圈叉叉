@@ -1,0 +1,71 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+    int y=-1, a1, a2, b1, b2, i, j;
+    int x;
+    vector<int> v(10);
+    
+    for(i=1;i<=9;i++){
+        cin >> x;
+        v[i] = x;
+    }
+    if(v[1] == 0 && v[2] == 0 && v[3] == 0){
+         y = 0;
+    }
+    else if(v[4] == 0 && v[5] == 0 && v[6] == 0){
+        y = 0;
+    }
+    else if(v[7] == 0 && v[8] == 0 && v[9] == 0){
+        y = 0;
+    }
+    else if(v[1] == 0 && v[5] == 0 && v[9] == 0){
+        y = 0;
+    }
+    else if(v[3] == 0 && v[5] == 0 && v[7] == 0){
+        y = 0;
+    }
+    else if(v[1] == 0 && v[4] == 0 && v[7] == 0){
+        y = 0;
+    }
+    else if(v[2] == 0 && v[5] == 0 && v[8] == 0){
+        y = 0;
+    }
+    else if(v[3] == 0 && v[6] == 0 && v[9] == 0){
+        y = 0;
+    }
+    else if(v[1] == 1 && v[2] == 1 && v[3] == 1){
+        y = 1;
+    }
+    else if(v[4] == 1 && v[5] == 1 && v[6] == 1){
+        y = 1;
+    }
+    else if(v[7] == 1 && v[8] == 1 && v[9] == 1){
+        y = 1;
+    }
+    else if(v[1] == 1 && v[5] == 1 && v[9] == 1){
+        y = 1;
+    }
+    else if(v[3] == 1 && v[5] == 1 && v[7] == 1){
+        y = 1;
+    }
+    else if(v[1] == 1 && v[4] == 1 && v[7] == 1){
+        y = 1;
+    }
+    else if(v[2] == 1 && v[5] == 1 && v[8] == 1){
+        y = 1;
+    }
+    else if(v[3] == 1 && v[6] == 1 && v[9] == 1){
+        y = 1;
+    }
+    
+    if(y == 1 || y == 0){
+        cout << "True"<< endl;
+    }
+    else cout << "False"<< endl;
+    return 0;
+}
