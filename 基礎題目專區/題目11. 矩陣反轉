@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main(){
+    int x, y, a1, a2, b1, b2, i, j;
+    
+    while(cin >> x >> y){
+        vector<vector<int> > v(x, vector<int>(y));
+        for(i=0;i<x;i++){
+            for(j=0;j<y;j++){
+                cin >> a1;
+                v[i][j] = a1;
+            }
+        }
+        for(j=0;j<y;j++){
+            cout << v[0][j];
+            for(i=1;i<x;i++){
+                cout << ' ' << v[i][j];
+            }
+            cout << endl;
+        }
+    }
+    return 0;
+}
