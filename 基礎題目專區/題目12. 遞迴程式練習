@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int f(int x1){
+    if(x1 == 0 || x1 == 1){
+        x1 = x1 + 1;
+        return x1;
+    }
+    else{
+        return f(x1 - 1) + f(floor(x1 / 2));
+    }
+}
+
+int main(){
+    int x1, x2, y1, y2, t;
+    
+    cin >> x1;
+    cout << f(x1) << endl;
+    return 0;
+}
