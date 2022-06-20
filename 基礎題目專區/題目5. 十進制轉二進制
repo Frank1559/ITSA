@@ -1,0 +1,15 @@
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+int main(){
+    int number;
+
+    while(cin >> number){
+        bitset<8> bs2(number);
+        cout << bs2 << endl;
+    }
+
+    return 0;
+}
