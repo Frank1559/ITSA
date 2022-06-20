@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int x, a1, a2, b1, b2, i;
+    char s;
+    
+    cin >> x;
+    for(i=0;i<x;i++){
+        cin >> s >> a1 >> b1 >> a2 >> b2;
+        if(s == '+'){
+            cout << (a1 + a2) << ' ' << (b1 + b2) << endl;
+        }
+        else if(s == '-'){
+            cout << (a1 - a2) << ' ' << (b1 - b2) << endl;
+        }
+        else if(s == '*'){
+            cout << (a1 * a2) + (b1 * b2 * -1) << ' ' << (b1 * a2) + (a1 * b2) << endl;
+        }
+    }
+
+    return 0;
+}
