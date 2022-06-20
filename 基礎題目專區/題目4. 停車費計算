@@ -1,0 +1,32 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+    int x1, x2, y1, y2, t;
+    
+    cin >> x1 >> y1;
+    cin >> x2 >> y2;
+    t = (x2 * 60 + y2) - (x1 * 60 + y1);
+    if(t <= 120){
+        t = t / 30;
+        t = t * 30;
+        cout << t << endl;
+    }
+    else{
+        if(t <= 240){
+            t = t - 120;
+            t = t / 30;
+            t = t * 40 + 120;
+            cout << t << endl;
+        }
+        else{
+            t = t - 240;
+            t = t / 30;
+            t = t * 60 + 280;
+            cout << t << endl;
+        }
+    }
+    return 0;
+}
