@@ -1,0 +1,21 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+    int y, a1, a2, b1, b2, i, j;
+    float x;
+    vector<float> v(10);
+    
+    for(i=0;i<10;i++){
+        cin >> x;
+        v[i] = x;
+    }
+    sort(v.begin(), v.end());
+    cout << "maximum:" << fixed << setprecision(2) << v[9] << endl;
+    cout << "minimum:" << v[0] << endl;
+    return 0;
+}
