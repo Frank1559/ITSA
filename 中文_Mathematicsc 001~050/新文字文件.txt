@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int main(){
+    int x1, x2=0, y1=0, y2=0, i, a;
+    string str, t;
+    double y=0;
+    vector<int> v;
+    
+    while(cin >> str){
+        x1 = 0;
+        a = (int)(str[0] - '0');
+        x2 = (int)(str[1] - '0');
+        y1 = (int)(str[2] - '0');
+        x1 += a * a * a;
+        x1 += x2 * x2 * x2;
+        x1 += y1 * y1 * y1;
+        if(x1 == stoi(str)){
+            cout << "Yes" << endl;
+        }
+        else cout << "No" << endl;
+    }
+    return 0;
+}
