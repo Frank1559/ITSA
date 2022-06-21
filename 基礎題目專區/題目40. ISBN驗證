@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    int x1, x2=0, y1=0, y2=0, i, a;
+    string str, t;
+    double y=0;
+    vector<int> v(10);
+    
+    for(i=0;i<10;i++){
+        cin >> str;
+        if(str == "X") x1 = 10;
+        else x1 = stoi(str);
+        y1 += x1;
+        v[i] = y1;
+    }
+    for(i=0;i<10;i++){
+        y2 += v[i];
+    }
+    if(y2 % 11 == 0) cout << "YES" << endl;
+    else cout << "NO" << endl;
+    return 0;
+}
