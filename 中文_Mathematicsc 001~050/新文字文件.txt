@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+double FourCutFiveKeep(double num, int t){
+    int pow10t=1;
+    while(t!=0){
+        pow10t *= 10;
+        t--;
+    }
+    return (int)(num * (double)pow10t + 0.5) / (double)pow10t;
+}
+
+int main(){
+    int y1=0, y2=0, i, a;
+    string str, t;
+    double y=0.0, x1, x2=0;
+    vector<int> v(10);
+    
+    while(cin >> x1){
+        y = x1 * x1;
+        // printf("%.1f\n", y);
+        cout << setprecision(1) << fixed << FourCutFiveKeep(y, 1) << endl;
+    }
+    return 0;
+}
