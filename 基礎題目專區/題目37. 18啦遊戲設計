@@ -1,0 +1,53 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    int x1, x2=0, y1=0, y2=0, i;
+    string str, t;
+    double y=0;
+    vector<int> v(4);
+    
+    for(i=0;i<4;i++){
+        cin >> x1;
+        v[i] = x1;
+    }
+    sort(v.begin(), v.end());
+    for(auto &a : v){
+        x2 = 0;
+        x2 = count(v.begin(), v.end(), a);
+        if(x2 == 1){
+            y1++;
+        }
+        else if(x2 == 2){
+            y2++;
+        }
+        else if(x2 == 3){
+            cout << "R" << endl;
+            break;
+        }
+        else if(x2 == 4){
+            cout << "WIN" << endl;
+            break;
+        }
+    }
+    if(y2 == 4) cout << v[3] * 2 << endl;
+    else if(y2 == 2){
+        x1 = 0;
+        for(auto &a : v){
+            x2 = 0;
+            x2 = count(v.begin(), v.end(), a);
+            if(x2 == 2){
+                continue;
+            }
+            else{
+                x1 += a;
+            }
+        }
+        cout << x1 << endl;
+    }
+    else if(y1 == 4) cout << "R" << endl;
+    return 0;
+}
