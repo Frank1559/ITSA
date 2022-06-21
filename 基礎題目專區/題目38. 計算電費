@@ -1,0 +1,43 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    int x1, x2=0, i;
+    string str, t;
+    double y=0, y1=0, y2=0;
+    vector<int> v(4);
+    
+    cin >> x1;
+    if(x1 <= 120){
+        cout << "Summer months:" << fixed << setprecision(2) << x1 * 2.1 << endl;
+        cout << "Non-Summer months:" << fixed << setprecision(2) << x1 * 2.1 << endl;
+    }
+    else if(x1 <= 330){
+        y1 = (x1 - 120) * 3.02 + (120 * 2.1);
+        y2 = (x1 - 120) * 2.68 + (120 * 2.1);
+        cout << "Summer months:" << fixed << setprecision(2) << y1 << endl;
+        cout << "Non-Summer months:" << fixed << setprecision(2) << y2 << endl;
+    }
+    else if(x1 <= 500){
+        y1 = (x1 - 330) * 4.39 + (210 * 3.02) + (120 * 2.1);
+        y2 = (x1 - 330) * 3.61 + (210 * 2.68) + (120 * 2.1);
+        cout << "Summer months:" << fixed << setprecision(2) << y1 << endl;
+        cout << "Non-Summer months:" << fixed << setprecision(2) << y2 << endl;
+    }
+    else if(x1 <= 700){
+        y1 = (x1 - 500) * 4.97 + (170 * 4.39) + (210 * 3.02) + (120 * 2.1);
+        y2 = (x1 - 500) * 4.01 + (170 * 3.61) + (210 * 2.68) + (120 * 2.1);
+        cout << "Summer months:" << fixed << setprecision(2) << y1 << endl;
+        cout << "Non-Summer months:" << fixed << setprecision(2) << y2 << endl;
+    }
+    else{
+        y1 = (x1 - 700) * 5.63 + (200 * 4.97)  + (170 * 4.39) + (210 * 3.02) + (120 * 2.1);
+        y2 = (x1 - 700) * 4.5 + (200 * 4.01)  + (170 * 3.61) + (210 * 2.68) + (120 * 2.1);
+        cout << "Summer months:" << fixed << setprecision(2) << y1 << endl;
+        cout << "Non-Summer months:" << fixed << setprecision(2) << y2 << endl;
+    }
+    return 0;
+}
