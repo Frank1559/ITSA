@@ -1,0 +1,18 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    int x1, x2=0, y1=0, y2=0, i, a;
+    string str, t;
+    double y=0;
+    vector<int> v(10);
+    
+    while(cin >> x1 >> x2){
+        y = (x1 * x2) / 2.0;
+        cout << fixed << setprecision(1) << y << endl;
+    }
+    return 0;
+}
