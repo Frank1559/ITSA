@@ -1,0 +1,19 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int main(){
+    int x1, x2=0, y1=0, y2=0, i, a;
+    string str, t;
+    double y=0;
+    vector<int> v(10);
+    
+    while(cin >> y1 >> y2){
+        x1 = y1 + y2;
+        cout << x1 * x1 << endl;
+    }
+    return 0;
+}
