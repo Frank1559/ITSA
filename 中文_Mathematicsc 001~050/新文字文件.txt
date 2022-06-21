@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int main(){
+    long long int x1, x2=0, y1=0, y2=0, i, a;
+    string str, t;
+    double y=0;
+    vector<int> v;
+    
+    while(cin >> y1){
+        x1 = 1;
+        for(i=2;i<=y1;i++){
+            x1 *= i;
+        }
+        cout << x1 << endl;
+    }
+    return 0;
+}
