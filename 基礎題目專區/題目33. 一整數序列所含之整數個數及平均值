@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int x1, x2, y1, y2, i;
+    string str, t;
+    double y=0;
+    
+    while(getline(cin, str)){
+        y = 0;
+        // cin.get();
+        stringstream X(str);
+        vector<int> v;        
+        while(getline(X, t, ' ')){
+            v.push_back(stoi(t));
+        }
+        for(i=0;i<v.size();i++){
+            y += v[i];
+        }
+        y = y / v.size();
+        cout << "Size: " << v.size() << endl;
+        cout << "Average: " << fixed  <<  setprecision(3) << y << endl;
+    }
+    return 0;
+}
