@@ -1,0 +1,36 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    int x1, x2=0, y1=0, y2=0, i, a;
+    string str, t;
+    double y=0;
+    vector<int> v(4);
+    
+    cin >> y2;
+    for(i=0;i<y2;i++){
+        cin >> x1 >> x2 >> y1;
+        if(x1 >= 60 && x2 >= 60 && y1 >= 60){
+            cout << "P" << endl;
+        }
+        else if((x1 < 60 && x2 >= 60 && y1 >= 60) || (x1 >= 60 && x2 < 60 && y1 >= 60) || (x1 >= 60 && x2 >= 60 && y1 < 60)){
+            a = x1 + x2 + y1;
+            if(a >= 220){
+                cout << "P" << endl;
+            }
+            else{
+                cout << "M" << endl;
+            }
+        }
+        else if((x1 >= 80 && x2 < 60 && y1 < 60) || (x1 < 60 && x2 >= 80 && y1 < 60) || (x1 < 60 && x2 < 60 && y1 >= 80)){
+            cout << "M" << endl;
+        }
+        else{
+            cout << "F" << endl;
+        }
+    }
+    return 0;
+}
