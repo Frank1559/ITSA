@@ -1,0 +1,59 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+    int x1, x2, y1, y2, t;
+    
+    cin >> x1 >> y1;
+    if(x1 == 1){
+        if(y1 < 21) cout << "Capricorn" << endl;
+        else cout << "Aquarius" << endl;
+    }
+    else if(x1 == 2){
+        if(y1 < 19) cout << "Aquarius" << endl;
+        else cout << "Pisces" << endl;
+    }
+    else if(x1 == 3){
+        if(y1 < 21) cout << "Pisces" << endl;
+        else cout << "Aries" << endl;
+    }
+    else if(x1 == 4){
+        if(y1 < 21) cout << "Aries" << endl;
+        else cout << "Taurus" << endl;
+    }
+    else if(x1 == 5){
+        if(y1 < 21) cout << "Taurus" << endl;
+        else cout << "Gemini" << endl;
+    }
+    else if(x1 == 6){
+        if(y1 < 22) cout << "Gemini" << endl;
+        else cout << "Cancer" << endl;
+    }
+    else if(x1 == 7){
+        if(y1 < 23) cout << "Cancer" << endl;
+        else cout << "Leo" << endl;
+    }
+    else if(x1 == 8){
+        if(y1 < 24) cout << "Leo" << endl;
+        else cout << "Virgo" << endl;
+    }
+    else if(x1 == 9){
+        if(y1 < 24) cout << "Virgo" << endl;
+        else cout << "Libra" << endl;
+    }
+    else if(x1 == 10){
+        if(y1 < 24) cout << "Libra" << endl;
+        else cout << "Scorpio" << endl;
+    }
+    else if(x1 == 11){
+        if(y1 < 23) cout << "Scorpio" << endl;
+        else cout << "Sagittarius" << endl;
+    }
+    else if(x1 == 12){
+        if(y1 < 22) cout << "Sagittarius" << endl;
+        else cout << "Capricorn" << endl;
+    }
+    return 0;
+}
